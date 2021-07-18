@@ -14,6 +14,6 @@ spec:
         app: petclinic-deployment
     spec:
       containers:
-      - name: 002784619873.dkr.ecr.ap-south-1.amazonaws.com/petclinic-eks:3
+      - name: 002784619873.dkr.ecr.us-east-2.amazonaws.com/petclinic-eks:1
         ports:
         - containerPort: 8080
