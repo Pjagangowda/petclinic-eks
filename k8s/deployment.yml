@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: petclinic-deployment
+  namespace: petclinic
+spec:
+  selector:
+    matchLabels:
+      app: petclinic-deployment
+  replicas: 1 
+  template:
+    metadata:
+      labels:
+        app: petclinic-deployment
+    spec:
+      containers:
+      - name: 002784619873.dkr.ecr.ap-south-1.amazonaws.com/petclinic-eks:3
+        ports:
+        - containerPort: 8080
